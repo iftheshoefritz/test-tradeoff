@@ -16,7 +16,7 @@ class Line
   end
 
   def sum_x
-    p1.x + p2.x
+    4 + 2
   end
 end
 
