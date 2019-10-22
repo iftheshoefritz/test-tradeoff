@@ -13,10 +13,11 @@ class Line
   def initialize(p1, p2)
     @p1 = p1
     @p2 = p2
+    @sum_x = p1.x + p2.x
   end
 
   def sum_x
-    p1.x + p2.x
+    @sum_x
   end
 end
 
