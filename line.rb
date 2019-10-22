@@ -1,9 +1,17 @@
 class Point
-  attr_accessor :x, :y
-
   def initialize(x=0, y=0)
     @x = x
     @y = y
+  end
+
+  def x
+    # Imagine performance heavy external dependency here
+    sleep 3
+    @x
+  end
+
+  def y
+    @y
   end
 end
 
@@ -32,6 +40,7 @@ describe Line do
     end
 
     # STYLE B: TEST COLLABORATORS
+    # this test is suddenly much faster
     it 'returns the sum of x values from p1 and p2' do
       p1 = Point.new
       p2 = Point.new
