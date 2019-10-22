@@ -22,6 +22,7 @@ end
 
 describe Line do
   describe '#sum_x' do
+    # STYLE A: TEST LOGIC
     it 'returns p1.x + p2.x' do
       p1 = Point.new(2,3)
       p2 = Point.new(4,5)
@@ -30,6 +31,7 @@ describe Line do
       expect(line.sum_x).to eq(line.p1.x + line.p2.x)
     end
 
+    # STYLE B: TEST COLLABORATORS
     it 'returns the sum of x values from p1 and p2' do
       p1 = Point.new
       p2 = Point.new
@@ -39,6 +41,7 @@ describe Line do
       expect(line.sum_x).to eq(6)
     end
 
+    # STYLE C: TEST EXPLICIT VALUES
     context 'explicit values' do
       it 'handles positive values' do
         line = Line.new(Point.new(2, 3), Point.new(4,5))
