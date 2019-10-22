@@ -37,8 +37,8 @@ describe Line do
         p1 = Point.new
         p2 = Point.new
         line = Line.new(p1, p2)
-        expect(p1).to receive(:x).and_return(2)
-        expect(p2).to receive(:x).and_return(4)
+        allow(p1).to receive(:x).and_return(2)
+        allow(p2).to receive(:x).and_return(4)
         expect(line.sum_x).to eq(6)
       end
     end
